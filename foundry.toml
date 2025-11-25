@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+remappings = [
+  "@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/",
+  '@solmate/=lib/solmate/src/',
+]
+
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
+
+[lint]
+lint_on_build = false
+
+[fuzz]
+runs = 256
+
